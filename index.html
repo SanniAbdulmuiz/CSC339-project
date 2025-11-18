@@ -12,7 +12,8 @@
     <div class="wrap" role="main">
       <h1>Student Login & Document Upload</h1>
       <p class="lead">
-        Username must match password. Upload two PDFs. Hover cards show icon changes.
+        Username must match password. Upload two files (PDF or image). Hover cards show icon
+        changes.
       </p>
 
       <form id="studentForm" novalidate>
@@ -52,7 +53,7 @@
         </div>
 
         <div>
-          <label>Upload PDFs (2 required)</label>
+          <label>Upload Files (PDF or Images — 2 required)</label>
 
           <div class="pdf-upload-row">
             <!-- CARD 1 -->
@@ -69,7 +70,7 @@
                     font-family="Arial"
                     font-weight="700"
                   >
-                    PDF
+                    FILE
                   </text>
                 </svg>
 
@@ -89,7 +90,7 @@
                 <div class="pdf-sub" id="pdfSub1">Click after upload to preview</div>
               </div>
 
-              <input type="file" accept="application/pdf" id="fileInput1" class="file-input" />
+              <input type="file" accept=".pdf, image/*" id="fileInput1" class="file-input" />
             </div>
 
             <!-- CARD 2 -->
@@ -106,7 +107,7 @@
                     font-family="Arial"
                     font-weight="700"
                   >
-                    PDF
+                    FILE
                   </text>
                 </svg>
 
@@ -126,7 +127,7 @@
                 <div class="pdf-sub" id="pdfSub2">Click after upload to preview</div>
               </div>
 
-              <input type="file" accept="application/pdf" id="fileInput2" class="file-input" />
+              <input type="file" accept=".pdf, image/*" id="fileInput2" class="file-input" />
             </div>
           </div>
 
