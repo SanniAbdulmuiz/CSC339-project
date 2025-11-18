@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f5f7fa;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 28px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(13, 25, 39, 0.08);
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.lead {
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input[type='text'],
+input[type='password'],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.small-note {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* PDF cards */
+.pdf-upload-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pdf-card {
+  width: 220px;
+  min-height: 100px;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+  padding: 12px;
+  background: linear-gradient(180deg, #fafafc, #f5f7fa);
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pdf-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.icons {
+  width: 44px;
+  height: 44px;
+}
+
+.icon-default {
+  width: 26px;
+  height: 26px;
+}
+.icon-hover {
+  width: 26px;
+  height: 26px;
+  display: none;
+}
+
+/* swap icons on hover */
+.pdf-card:hover .icon-default {
+  display: none;
+}
+.pdf-card:hover .icon-hover {
+  display: block;
+}
+
+.pdf-name {
+  font-size: 13px;
+  font-weight: bold;
+}
+.pdf-sub {
+  font-size: 12px;
+  color: #475569;
+}
+
+.file-input {
+  display: none;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+.choose-btn {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.primary {
+  background: #0b74ff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+}
+
+#formMessage {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+#formMessage.error {
+  color: #b91c1c;
+}
+#formMessage.success {
+  color: #166534;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 10, 20, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.panel {
+  width: min(92%, 900px);
+  height: min(90vh, 700px);
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel header {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.viewer {
+  flex: 1;
+  background: #f3f4f6;
+  display: flex;
+}
+
+.viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .pdf-card {
+    width: 100%;
+  }
+}
